@@ -14,7 +14,7 @@
 
 ## Frontmatter
 
-When creating a new .md note file, always include this frontmatter:
+When creating a new .md note file, include this frontmatter:
 
 ```
 ---
@@ -23,11 +23,19 @@ description: ""
 tags: []
 updated: "YYYY-MM-DD"
 coAuthor: "opencode"
-sections: ["Section 1", "Section 2", ...]
 ---
 ```
 
-**Important**: Extract all `##` second-level headers from the content and add them as a string array to the `sections` field in the frontmatter.
+**Note**: Do NOT add a `sections` array. The sidebar uses headings extracted automatically from `render()` in `[id].astro`.
+
+## Heading Guidelines
+
+When writing notes in `src/content/notes/`:
+
+1. **Use "And" instead of "&"** - e.g., "Create And Manage Tables" not "Create & Manage Tables"
+2. **No parenthetical subtitles** - e.g., "File Explorer" not "File Explorer (NeoTree)"
+3. **No numbered prefixes** - e.g., "Basic Commands" not "1. Basic Commands"
+4. **Keep sections short and descriptive** - use title case for each word
 
 ## Git Workflow
 
@@ -39,13 +47,3 @@ sections: ["Section 1", "Section 2", ...]
 - Be concise - answer in 1-3 sentences
 - Don't add comments to code unless asked
 - Don't create new folders unless explicitly requested
-
-## Heading Guidelines
-
-When writing notes in `src/content/notes/`:
-
-1. **Use "And" instead of "&"** - e.g., "Create And Manage Tables" not "Create & Manage Tables"
-2. **No parenthetical subtitles** - e.g., "File Explorer" not "File Explorer (NeoTree)"
-3. **No numbered prefixes** - e.g., "Basic Commands" not "1. Basic Commands"
-4. **Keep sections short and descriptive** - use title case for each word
-5. **The `sections` frontmatter must exactly match the `##` headings in the content** (after slugifying: lowercase + spaces to dashes)

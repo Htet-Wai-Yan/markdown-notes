@@ -1,11 +1,14 @@
 ---
 import { ArrowBigLeft } from "@lucide/astro";
 import RootLayout from "./RootLayout.astro";
-const { sections } = Astro.props;
 
-function slugify(text: string) {
-  return text.toLowerCase().replace(/\s+/g, "-");
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
 }
+
+const { headings } = Astro.props;
 ---
 
 <RootLayout>
@@ -21,15 +24,17 @@ function slugify(text: string) {
       <h4>On this page</h4>
       <div class="mt-6 space-y-1">
         {
-          sections?.map((sec: string) => (
-            <a
-              href={`#${slugify(sec)}`}
-              class="block"
-              data-section={slugify(sec)}
-            >
-              {sec}
-            </a>
-          ))
+          headings
+            ?.filter((h: Heading) => h.depth === 2)
+            .map((h: Heading) => (
+              <a
+                href={`#${h.slug}`}
+                class="block"
+                data-section={h.slug}
+              >
+                {h.text}
+              </a>
+            ))
         }
       </div>
     </aside>

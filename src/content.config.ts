@@ -6,10 +6,9 @@ const notes = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    tags: z.array(z.string()).optional(),
-    updated: z.string().optional(),
-    coAuthor: z.string().optional(),
-    sections: z.array(z.string()).optional(),
+    tags: z.array(z.string()),
+    updated: z.string(),
+    coAuthor: z.string(),
   }),
 });
 

@@ -4,7 +4,6 @@ description: "Complete guide to PostgreSQL basics, queries, joins, and operation
 tags: ["postgresql", "sql", "database"]
 updated: "2026-03-24"
 coAuthor: "opencode"
-sections: ["Basic Commands", "Create And Manage Databases", "Create And Manage Tables", "CRUD Operations", "Constraints", "Joins", "Aggregations", "Subqueries", "Common Functions", "Views", "Indexes", "Transactions", "Export And Import", "User Management", "Useful Tips"]
 ---
 
 # PostgreSQL

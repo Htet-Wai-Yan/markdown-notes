@@ -15,10 +15,10 @@ export async function getStaticPaths() {
 }
 
 const { note } = Astro.props;
-const { Content } = await render(note);
+const { Content, headings } = await render(note);
 ---
 
-<NoteLayout sections={note.data.sections}>
+<NoteLayout headings={headings}>
   <div class="prose">
     <Content />
   </div>

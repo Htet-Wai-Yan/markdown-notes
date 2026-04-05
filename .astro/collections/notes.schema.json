@@ -20,18 +20,15 @@
     "coAuthor": {
       "type": "string"
     },
-    "sections": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
     "$schema": {
       "type": "string"
     }
   },
   "required": [
     "title",
-    "description"
+    "description",
+    "tags",
+    "updated",
+    "coAuthor"
   ]
 }

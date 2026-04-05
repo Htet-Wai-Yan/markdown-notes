@@ -4,7 +4,6 @@ description: "Useful LazyVim key shortcuts to manage files and directories"
 tags: ["lazyvim", "vim", "neovim"]
 updated: "2026-04-04"
 coAuthor: "opencode"
-sections: ["File Explorer", "Quick File Open", "Buffers", "File Operations"]
 ---
 
 # LazyVim File & Directory Management
