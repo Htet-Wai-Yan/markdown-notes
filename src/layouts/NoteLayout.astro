@@ -20,7 +20,7 @@ const { headings } = Astro.props;
       <a href="/" class="btn btn-sm"><ArrowBigLeft class="h-4 w-4" /> Home</a>
     </article>
     <aside
-      class="grow w-sm shrink-0 p-8 sticky top-0 h-screen overflow-y-auto border-s border-base-300 prose prose-a:no-underline prose-a:text-sm prose-a:text-base-content/70 prose-a:hover:text-base-content"
+      class="grow p-8 sticky top-0 h-screen overflow-y-auto border-s border-base-300 prose prose-a:no-underline prose-a:text-sm prose-a:text-base-content/70 prose-a:hover:text-base-content"
     >
       <h4>On this page</h4>
       <div class="mt-6 space-y-1">
@@ -28,11 +28,7 @@ const { headings } = Astro.props;
           headings
             ?.filter((h: Heading) => h.depth === 2)
             .map((h: Heading) => (
-              <a
-                href={`#${h.slug}`}
-                class="block"
-                data-section={h.slug}
-              >
+              <a href={`#${h.slug}`} class="block" data-section={h.slug}>
                 {h.text}
               </a>
             ))

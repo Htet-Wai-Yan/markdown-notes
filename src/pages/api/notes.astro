@@ -18,9 +18,9 @@ const notes = await (async () => {
   notes.map((note) => (
     <a href={`/notes/${note.id}`}>
       <div class="relative group">
-        <div class="absolute -z-1 bg-transparent group-hover:bg-gray-200 h-44 w-full group-hover:rotate-3 group-hover:-translate-y-2 group-hover:translate-x-2 transition-all ease-in-out" />
-        <div class="absolute -z-2 bg-transparent group-hover:bg-gray-300 h-44 w-full group-hover:-translate-y-1 group-hover:translate-x-1 transition-all ease-in-out" />
-        <div class="flex flex-col text-center justify-between h-44 w-full bg-gray-100 p-4 shadow-md group-hover:shadow-none group-hover:rotate-6 group-hover:-translate-y-3 group-hover:translate-x-3 transition-all ease-in-out">
+        <div class="absolute -z-1 bg-transparent group-hover:bg-gray-200 h-48 w-full group-hover:rotate-3 group-hover:-translate-y-2 group-hover:translate-x-2 transition-all ease-in-out" />
+        <div class="absolute -z-2 bg-transparent group-hover:bg-gray-300 h-48 w-full group-hover:-translate-y-1 group-hover:translate-x-1 transition-all ease-in-out" />
+        <div class="flex flex-col text-center justify-between h-48 w-full bg-gray-100 p-4 shadow-md group-hover:shadow-none group-hover:rotate-6 group-hover:-translate-y-3 group-hover:translate-x-3 transition-all ease-in-out">
           <p class="text-xs font-semibold uppercase">{note.data.title}</p>
           <div class="space-y-4">
             <p class="text-xs text-base-content/50">by</p>
