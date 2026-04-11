@@ -12,14 +12,15 @@ const { headings } = Astro.props;
 ---
 
 <RootLayout>
-  <div class="flex justify-end">
-    <article class="p-8 space-y-6">
+  <div class="flex">
+    <aside class="grow"></aside>
+    <article class="p-8 space-y-6 min-w-3xl">
       <a href="/" class="btn btn-sm"><ArrowBigLeft class="h-4 w-4" /> Home</a>
       <slot />
       <a href="/" class="btn btn-sm"><ArrowBigLeft class="h-4 w-4" /> Home</a>
     </article>
     <aside
-      class="w-sm shrink-0 p-8 sticky top-0 h-screen overflow-y-auto border-s border-base-300 prose prose-a:no-underline prose-a:text-sm prose-a:text-base-content/70 prose-a:hover:text-base-content"
+      class="grow w-sm shrink-0 p-8 sticky top-0 h-screen overflow-y-auto border-s border-base-300 prose prose-a:no-underline prose-a:text-sm prose-a:text-base-content/70 prose-a:hover:text-base-content"
     >
       <h4>On this page</h4>
       <div class="mt-6 space-y-1">
